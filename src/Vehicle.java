@@ -6,8 +6,7 @@ import utilities.VehicleType;
 //Parent class
 public abstract class Vehicle {
 
-	protected String plate, model, owner;
-	protected boolean fuelType;
+	protected String plate, model, owner, fuelType;
 
 	// Default Constructor to print out the Vehicles details [Generate Constructor]
 
@@ -41,10 +40,11 @@ public abstract class Vehicle {
 	public String getOwner() {
 		return owner;
 	}
-
-	public boolean isFuelType() {
+	
+	public String getFuelType() {
 		return fuelType;
 	}
+
 	
 	
 	public abstract String getInfo();
