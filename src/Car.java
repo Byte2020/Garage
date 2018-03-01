@@ -1,67 +1,34 @@
 import java.util.Scanner;
 import utilities.FuelType;
-
+import utilities.VehicleType;
 
 public class Car extends Vehicle {
 	
-	private String plate;  
-	private String model; 
-	private String owner;
-	private String NumberOfSeats;
-	private FuelType type;
-		
+	private String color; 
+	
 	//Constructor 
-	public Car (String plate, String model, String owner, String NumberOfSeats, FuelType type) {
-				
-			this.plate = plate; 	 
-			this.model = model; 
-			this.owner = owner;
-			this.NumberOfSeats = NumberOfSeats;
-			this.type = type;  
-	}
-	
-	//Getters
-	
-	public String getPlate() {
-		return plate; 	
-	}
-	
-	public String getmodel() {
-		return model;  	
-	}
-	
-	public String getOwner() {
-		return owner; 	
-	}
-	
-	public String getNumberOfSeats() {
-		return NumberOfSeats; 	
-	}
-	
-	public FuelType getFuelType() {
-		return type; 
-	}
-	
-	public void printOutDetails() {
-		super.printDetails(); 
+	public Car () {
+		super();  
+		
+		this.color = color;
 		
 		Scanner input = new Scanner(System.in);   
 		
-		System.out.println("Please enter the registration plate?");
-		String plate = input.next();
+		System.out.println("Color of the car?");
+		String color = input.next();
 		
-		System.out.println("Model of the vehicle?");
-		String model = input.next();
-		
-		System.out.println("Owner's Name?");
-		String owner = input.next();
-		
-		System.out.println("How many Seats?");
-		String NumberOfSeats = input.next();
-		
-		System.out.println("Fuel Type?");
-		String FuelType = input.next(); 
-	
+		input.close();
 	}
 	
+	public VehicleType getType() {
+		return VehicleType.CAR; 
+		
+	}
+		
+	
+	
+	public String getInfo() {
+		return plate+"\t" +model+ "\t" +owner+ "\t" +color+ "\t" +fuelType;
+	}
+
 }
