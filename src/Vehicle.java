@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import utilities.FuelType;
+import utilities.VehicleType;
 
 //Parent class
 public abstract class Vehicle {
@@ -44,6 +45,11 @@ public abstract class Vehicle {
 	public boolean isFuelType() {
 		return fuelType;
 	}
+	
+	
+	public abstract String getInfo();
+	public abstract VehicleType getType();
+	
 
 	// Print out method
 	public void printDetails() {

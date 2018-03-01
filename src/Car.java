@@ -20,13 +20,14 @@ public class Car extends Vehicle {
 		input.close();
 	}
 	
+	@Override
 	public VehicleType getType() {
 		return VehicleType.CAR; 
 		
 	}
 		
 	
-	
+	@Override
 	public String getInfo() {
 		return plate+"\t" +model+ "\t" +owner+ "\t" +color+ "\t" +fuelType;
 	}

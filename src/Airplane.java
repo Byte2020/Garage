@@ -19,10 +19,15 @@ public class Airplane extends Vehicle {
 		input.close();
 		
 }
-	
+	@Override
 	public VehicleType getType() {
 		return VehicleType.AIRPLANE; 
 		
+	}
+	
+	@Override
+	public String getInfo() {
+		return plate+"\t" +model+ "\t" +owner+ "\t" +NumberOfSeats+ "\t" +fuelType;
 	}
 	
 }

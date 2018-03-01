@@ -45,7 +45,7 @@ public class RegisteredVehiculesList {
 	}
 
 
-	public static Car findCar(String regPlate) {
+	public static Vehicle findCar(String regPlate) {
 		for (int i = 0; i < nextVehicule; i++) {
 			if (vehicles[i].getPlate().equalsIgnoreCase(regPlate))return vehicles[i] ;
 		}

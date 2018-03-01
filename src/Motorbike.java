@@ -20,9 +20,13 @@ public class Motorbike extends Vehicle {
 		input.close();
 		
 	}	
-	
+	@Override
 	public VehicleType getType() {
 		return VehicleType.MOTORBIKE; 
 		
+	}
+	@Override
+	public String getInfo() {
+		return plate+"\t" +model+ "\t" +owner+ "\t" +NumberOfWheels+ "\t" +fuelType;
 	}
 }

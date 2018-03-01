@@ -1,8 +1,11 @@
 
 public class garageHandler {
 
+	Garage garage=new Garage();
+	
+	
 	public void listParkedVehicles() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	
@@ -11,11 +14,17 @@ public class garageHandler {
 	}
 
 	public void checkIn(Vehicle visitor) {
-		// TODO Auto-generated method stub
+		if(visitor.getType()==VehicleType.CAR ||visitor.getType()==VehicleType.MOTORBIKE )
+		garage.addVehicles(vehicle);
 		
 	}
 
 	public void checkOut(String regPlate) {
+		garage.showPlate();
+		
+	}
+
+	public void registerParkedVehicles() {
 		// TODO Auto-generated method stub
 		
 	}
