@@ -1,9 +1,14 @@
 import java.util.ArrayList;
 
+
 public class Garage {
 
 	private static final int maxCapacity = 10;
 	
+	public ArrayList<Vehicle> getVehicleGarageArray() {
+		return vehicleGarageArray;
+	}
+
 	private ArrayList<Vehicle> vehicleGarageArray;
 	
 	// Constructor
@@ -21,8 +26,8 @@ public class Garage {
 	
 	public void addVehicles(Vehicle vehicle) {
 		
-		if (this.NumberOfAvailableSpots() > 0) {
-			this.vehicleGarageArray(vehicle);
+		if (NumberOfAvailableSpots() > 0) {
+			vehicleGarageArray.add(vehicle);
 			
 			
 			System.out.println(+NumberOfAvailableSpots()+ "Available Spots" );

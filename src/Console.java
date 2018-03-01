@@ -18,7 +18,7 @@ public class Console {
 
 		
 
-		Garage garage=new Garage();
+		garageHandler garageHandler=new garageHandler();
 		
 		RegisteredVehiculesList vehicules=new RegisteredVehiculesList();
 		vehicules=loadVehiclesFromFile(vehicules);
@@ -46,27 +46,27 @@ public class Console {
 			case 1:{		// check in submenu				
 				String regPlate= JOptionPane.showInputDialog("what does the cars regiter plate say?");
 				Vehicle visitor=RegisteredVehiculesList.findCar(regPlate);
-				garage.checkIn(visitor);
+				garageHandler.checkIn(visitor);
 				break;
 			}
 			case 2:{		// check out submenu
 				String regPlate= JOptionPane.showInputDialog("what does the cars regiter plate say?");
-				garage.checkOut(regPlate);
+				garageHandler.checkOut(regPlate);
 				break;
 			}
 			case 3:{		// register new vehicule submenu
 //				String name= JOptionPane.showInputDialog("what is this new vehicule's name?");
 //				String regPlate= JOptionPane.showInputDialog("Whitch is it's regiter plate?");
-				vehicules.add(name, regPlate);
+				vehicules.add();
 				break;
 			}
 			case 4:{		// print lists submenu
-				garage.printVehiculesInGarage();
+				garageHandler.listParkedVehicles();
 				break;
 			}
 			case 5:{			//quit and reccord
 				oppen= false;
-				garage.reccordGarageStatus();
+				garageHandler.listParkedVehicles();
 				vehicules.reccordRegistredCarsList();
 				break;
 			}	
