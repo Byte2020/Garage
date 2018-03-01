@@ -1,18 +1,48 @@
+import java.util.ArrayList;
+
 public class MyGarage {
 
-	private static final int maxCapacity = 300;
-	private ArrayList<Vehicles> CarParkingArray;
-
-	// constructor
-	public abstract MyGarage();
-
+	private static final int maxCapacity = 10;
+	
+	private ArrayList<Vehicle> vehicleGarageArray;
+	
+	// Constructor
+	public MyGarage()
 	{
+		//This check Max capacity
+		this.vehicleGarageArray = new ArrayList<Vehicle>(maxCapacity);
+	}
+	
 
-		this.CarParkingArray = new ArrayList<Vehicles>(maxCapacity);
+	//Method to find parking spot available in the Garage	
+	public int NumberOfAvailableSpots(){
+		return maxCapacity - vehicleGarageArray.size(); 
+	}
+	
+	public void addVehicles(Vehicle vehicle) {
+		
+		if (this.NumberOfAvailableSpots() > 0) {
+			this.vehicleGarageArray(vehicle);
+			
+			
+			System.out.println(+NumberOfAvailableSpots()+ "Available Spots" );
+		}
+		
+		else {
+			System.out.println("Full Parking");
+		}
+	
+	}
+	
+	public void printOutVehicleDetails () {
+		
+		// TODO Do something here
+		
 	}
 
-	public static int getMaxCapacity() {
-		return maxCapacity;
+	private void vehicleGarageArray(Vehicle vehicle) {
+		// TODO Auto-generated method stub
+		
 	}
-
+		
 }
