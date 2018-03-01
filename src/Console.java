@@ -1,11 +1,10 @@
 
 
-import java.awt.GridLayout;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
-import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 
 public class Console {
@@ -15,7 +14,7 @@ public class Console {
 		
 		
 		
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 				//  initialice();				get garages list and vehicules registered from file , probably  from a main menu that later starts the console
 				//  we create garages and a few vehicules here for the moment
 		
@@ -23,13 +22,9 @@ public class Console {
 		Garage garage=new Garage();
 		
 		RegisteredCarsList cars=new RegisteredCarsList();
+		cars=loadCarsFromFile(cars);
 		
-		cars.add("Peios Ferrari","1");
-		cars.add("Miguels Masseratti","2");
-		cars.add("Rogers Skoda","3");
-		cars.add("Linus' Volvo","4");
-		cars.add("Niklas' Hummer","5");
-
+		
 		
 		boolean oppen=true;
 		
@@ -86,7 +81,21 @@ public class Console {
 	}
 
 
+	private static RegisteredCarsList loadCarsFromFile(RegisteredCarsList cars) throws FileNotFoundException {
+		File text = new File("carRegister.txt");
+		Scanner input = new Scanner(text);
 
+		while (input.hasNext()) {
+			String plate = input.next();
+			if (input.hasNext()) {
+			String name = input.nextLine();
+			cars.add(name,plate);
+			}
+		}
+
+		input.close();
+		return(cars);
+	}
 		
 	
 
