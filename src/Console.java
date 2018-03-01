@@ -15,14 +15,13 @@ public class Console {
 		
 		
 	public static void main(String[] args) throws FileNotFoundException {
-				//  initialice();				get garages list and vehicules registered from file , probably  from a main menu that later starts the console
-				//  we create garages and a few vehicules here for the moment
+
 		
 
 		Garage garage=new Garage();
 		
-		RegisteredCarsList cars=new RegisteredCarsList();
-		cars=loadCarsFromFile(cars);
+		RegisteredVehiculesList vehicules=new RegisteredVehiculesList();
+		vehicules=loadVehiclesFromFile(vehicules);
 		
 		
 		
@@ -44,12 +43,10 @@ public class Console {
 				JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
 		
 			switch (num+1) {
-			case 1:{		// check in submenu
-				
-				
+			case 1:{		// check in submenu				
 				String regPlate= JOptionPane.showInputDialog("what does the cars regiter plate say?");
-				Car visitor=RegisteredCarsList.findCar(regPlate);
-
+				Vehicle visitor=RegisteredVehiculesList.findCar(regPlate);
+				garage.checkIn(visitor);
 				break;
 			}
 			case 2:{		// check out submenu
@@ -58,9 +55,9 @@ public class Console {
 				break;
 			}
 			case 3:{		// register new vehicule submenu
-				String name= JOptionPane.showInputDialog("what is this new vehicule's name?");
-				String regPlate= JOptionPane.showInputDialog("Whitch is it's regiter plate?");
-				cars.add(name, regPlate);
+//				String name= JOptionPane.showInputDialog("what is this new vehicule's name?");
+//				String regPlate= JOptionPane.showInputDialog("Whitch is it's regiter plate?");
+				vehicules.add(name, regPlate);
 				break;
 			}
 			case 4:{		// print lists submenu
@@ -70,7 +67,7 @@ public class Console {
 			case 5:{			//quit and reccord
 				oppen= false;
 				garage.reccordGarageStatus();
-				cars.reccordRegistredCarsList();
+				vehicules.reccordRegistredCarsList();
 				break;
 			}	
 			default:
@@ -81,7 +78,7 @@ public class Console {
 	}
 
 
-	private static RegisteredCarsList loadCarsFromFile(RegisteredCarsList cars) throws FileNotFoundException {
+	private static RegisteredVehiculesList loadVehiclesFromFile(RegisteredVehiculesList vehicles) throws FileNotFoundException {
 		File text = new File("carRegister.txt");
 		Scanner input = new Scanner(text);
 
@@ -89,12 +86,12 @@ public class Console {
 			String plate = input.next();
 			if (input.hasNext()) {
 			String name = input.nextLine();
-			cars.add(name,plate);
+			vehicles.add();
 			}
 		}
 
 		input.close();
-		return(cars);
+		return(vehicles);
 	}
 		
 	
