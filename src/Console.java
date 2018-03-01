@@ -20,7 +20,7 @@ public class Console {
 		
 
 		garageHandler garageHandler=new garageHandler();
-		
+
 		RegisteredVehiculesList vehicules=new RegisteredVehiculesList();
 		vehicules=loadVehiclesFromFile(vehicules);
 		
@@ -85,11 +85,13 @@ public class Console {
 
 		while (input.hasNext()) {
 			String plate = input.next();
-			if (input.hasNext()) {
-			String name = input.nextLine();
-			vehicles.add();
+			String model = input.next();
+			String owner = input.next();
+			String specialByType = input.next();
+			String fuelType= input.nextLine();
+			vehicles.add( );
 			}
-		}
+		
 
 		input.close();
 		return(vehicles);

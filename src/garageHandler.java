@@ -1,12 +1,18 @@
+import utilities.VehicleType;
 
 public class garageHandler {
 
 	Garage garage=new Garage();
 	
+	public garageHandler() {
+		
+		
+	}
+	
 	
 	public void listParkedVehicles() {
 		
-		
+		garage.printOutVehicleDetails();
 	}
 	
 	public void listVehicleTypes() {
@@ -15,12 +21,12 @@ public class garageHandler {
 
 	public void checkIn(Vehicle visitor) {
 		if(visitor.getType()==VehicleType.CAR ||visitor.getType()==VehicleType.MOTORBIKE )
-		garage.addVehicles(vehicle);
+		garage.addVehicles(visitor);
 		
 	}
 
 	public void checkOut(String regPlate) {
-		garage.showPlate();
+		Vehicle vehicle=garage.findPlate();
 		
 	}
 

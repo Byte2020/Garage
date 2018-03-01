@@ -5,34 +5,28 @@ public class Garage {
 
 	private static final int maxCapacity = 10;
 	
-	public ArrayList<Vehicle> getVehicleGarageArray() {
-		return vehicleGarageArray;
-	}
 
-	private ArrayList<Vehicle> vehicleGarageArray;
+
+	private Vehicle[] vehiclesParked= new Vehicle[maxCapacity];
+	private int nextFreespot=0;
 	
 	// Constructor
 	public Garage()
 	{
-		//This check Max capacity
-		this.vehicleGarageArray = new ArrayList<Vehicle>(maxCapacity);
+		
 	}
 	
 
 	//Method to find parking spot available in the Garage	
 	public int NumberOfAvailableSpots(){
-		return maxCapacity - vehicleGarageArray.size(); 
+		return maxCapacity - nextFreespot; 
 	}
 	
 	public void addVehicles(Vehicle vehicle) {
-		
 		if (NumberOfAvailableSpots() > 0) {
-			vehicleGarageArray.add(vehicle);
-			
-			
-			System.out.println(+NumberOfAvailableSpots()+ "Available Spots" );
-		}
-		
+			vehiclesParked[nextFreespot]=vehicle;
+			nextFreespot++;
+		}		
 		else {
 			System.out.println("Full Parking");
 		}
@@ -41,13 +35,19 @@ public class Garage {
 	
 	public void printOutVehicleDetails () {
 		
-		// TODO Do something here
+		System.out.println("this vehicles are parked in the garage att the moment");
+		for (int i = 0; i < nextFreespot; i++) {
+			System.out.println(vehiclesParked[i].getInfo());
+		}
 		
 	}
 
-	private void vehicleGarageArray(Vehicle vehicle) {
+
+
+
+	public Vehicle findPlate() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 		
 }
