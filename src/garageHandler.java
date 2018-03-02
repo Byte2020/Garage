@@ -1,11 +1,14 @@
+import java.io.FileNotFoundException;
+
 import utilities.VehicleType;
 
 public class garageHandler {
 
 	Garage garage = new Garage();
 
-	public garageHandler() {
 
+	public garageHandler() throws FileNotFoundException {
+		garage.readFromFile();
 	}
 
 	public void listParkedVehicles() {
@@ -28,8 +31,8 @@ public class garageHandler {
 
 	}
 
-	public void registerParkedVehicles() {
-		// TODO Auto-generated method stub
+	public void registerParkedVehicles() throws FileNotFoundException {
+		garage.writeCarsInGaragetoList();
 
 	}
 

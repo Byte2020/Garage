@@ -62,7 +62,7 @@ public class Console {
 			}
 			case 5: { // quit and reccord
 				oppen = false;
-				garageHandler.listParkedVehicles();
+				garageHandler.registerParkedVehicles();
 				vehicules.reccordRegistredCarsList();
 				break;
 			}
