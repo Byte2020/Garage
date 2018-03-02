@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 import utilities.FuelType;
 import utilities.VehicleType;
 
@@ -9,16 +11,8 @@ public class Motorbike extends Vehicle {
 
 	// Constructor
 	public Motorbike() {
-
-		this.NumberOfWheels = NumberOfWheels;
-
-		Scanner input = new Scanner(System.in);
-
-		System.out.println("How many Wheels?");
-		String NumberOfWheels = input.next();
-
-		input.close();
-
+		super();
+		NumberOfWheels= JOptionPane.showInputDialog("How many wheels?");
 	}
 
 	@Override

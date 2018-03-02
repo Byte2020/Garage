@@ -1,4 +1,7 @@
 import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
 import utilities.FuelType;
 import utilities.VehicleType;
 
@@ -10,14 +13,8 @@ public class Car extends Vehicle {
 	public Car() {
 		super();
 
-		this.color = color;
-
-		Scanner input = new Scanner(System.in);
-
-		System.out.println("Color of the car?");
-		String color = input.next();
-
-		input.close();
+		color= JOptionPane.showInputDialog("What color is the car?");
+		
 	}
 
 

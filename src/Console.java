@@ -46,10 +46,7 @@ public class Console {
 				break;
 			}
 			case 3: { // register new vehicule submenu
-				// String name= JOptionPane.showInputDialog("what is this new vehicule's
-				// name?");
-				// String regPlate= JOptionPane.showInputDialog("Whitch is it's regiter
-				// plate?");
+				
 				vehicules.add();
 				break;
 			}
