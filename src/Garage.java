@@ -1,21 +1,57 @@
 import java.util.ArrayList;
 
-public class Garage {
+import sun.util.resources.cldr.pa.CalendarData_pa_Arab_PK;
 
+public class Garage {
+	
 		private static final int maxCapacity = 10; 
+		private static Car [] array = new Car[maxCapacity]; 
+		
+		private static int nextVehicle; 
+		
 		private ArrayList <Vehicle> carParkArray; // Every new registration will of type Vehicle
 		
 		
 		//Constructor 
 		public Garage() {
-			this.carParkArray = new ArrayList <Vehicle>(maxCapacity);
 			
 		}
 		
 		public static int getMaxCapacity ()  {
 			return maxCapacity; 
+		}
+	
+			public int numberOfAvailableSpots() {
+				return maxCapacity - nextVehicle;     
+						
+						
+			}
 			
-		//Number of 
+			
+//			public boolean isParkingEmpty() {
+//				boolean isEmpty = true;
+//				int i = 0;
+//				int placesOfParking = parking.length;
+//				while (isEmpty && i < placesOfParking) {
+//					isEmpty = (parking[i] == null);
+//					i++;
+//				}
+//				return isEmpty;
+//			}
+//
+//			public boolean isParkingFull() {
+//				boolean isFull = true;
+//				int i = 0;
+//				int placesOfParking = parking.length;
+//				while (isFull && i < placesOfParking) {
+//					isFull = !isSlotEmpty(i);
+//					i++;
+//				}
+//				return isFull;
+//			}	
+			
+			
+			
 			
 		}
 
