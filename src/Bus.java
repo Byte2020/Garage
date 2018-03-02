@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 import utilities.FuelType;
 import utilities.VehicleType;
 
@@ -10,13 +12,7 @@ public class Bus extends Vehicle {
 	public Bus() {
 		super();
 
-		Scanner input = new Scanner(System.in);
-
-		System.out.println("Length of the Bus?");
-		String length = input.next();
-
-		input.close();
-
+		length= JOptionPane.showInputDialog("Length of the bus?");
 	}
 
 	@Override

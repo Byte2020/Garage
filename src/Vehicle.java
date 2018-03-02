@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 import utilities.FuelType;
 import utilities.VehicleType;
 
@@ -12,20 +14,10 @@ public abstract class Vehicle {
 
 	public Vehicle() {
 
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the registration plate, please?");
-		String plate = input.next();
-
-		System.out.println("Model of the Vehicle?");
-		String model = input.next();
-
-		System.out.println("Owner's name?");
-		String owner = input.next();
-
-		System.out.println("Fuel Type?");
-		String FuelType = input.next();
-		
-		input.close();
+		plate= JOptionPane.showInputDialog("Enter the registration plate, please?");
+		model= JOptionPane.showInputDialog("Model of the Vehicle?");
+		owner= JOptionPane.showInputDialog("Owner's name?");
+		fuelType= JOptionPane.showInputDialog("Fuel Type?");
 	}
 	public Vehicle(String plate, String model, String owner, String fuelType) {
 		super();

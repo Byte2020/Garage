@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+import utilities.VehicleType;
+
 
 public class RegisteredVehiculesList {
 	static Vehicle[] vehicles =new Vehicle[200];
@@ -55,10 +57,16 @@ public class RegisteredVehiculesList {
 	public void reccordRegistredCarsList() throws FileNotFoundException {
 		PrintWriter out = new PrintWriter("carRegister.txt");
 		for (int i = 0; i < nextVehicule; i++) {
-			
+			if (vehicles[i].getType()==VehicleType.CAR) {
 			out.println(vehicles[i].getInfo());
+			}
 		}
 		out.close();
+	}
+
+	public void addFromList(Car carInList) {
+		vehicles[nextVehicule]=carInList;
+		nextVehicule++;
 	}
 
 

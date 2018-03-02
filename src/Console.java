@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+
 public class Console {
 
 	public static void main(String[] args) throws FileNotFoundException {
@@ -45,10 +46,7 @@ public class Console {
 				break;
 			}
 			case 3: { // register new vehicule submenu
-				// String name= JOptionPane.showInputDialog("what is this new vehicule's
-				// name?");
-				// String regPlate= JOptionPane.showInputDialog("Whitch is it's regiter
-				// plate?");
+				
 				vehicules.add();
 				break;
 			}
@@ -77,12 +75,13 @@ public class Console {
 			String plate = input.next();
 			String model = input.next();
 			String owner = input.next();
-			String specialByType = input.next();
+			String color = input.next();			
 			String fuelType = input.next();
-			String type= input.nextLine();
-			swi
 			
-			vehicles.add( );
+			Car carInList =new Car(plate,model,owner,color,fuelType);
+			vehicles.addFromList(carInList);	
+			System.out.println(plate+" "+model+" "+owner+" "+fuelType+" "+color);
+			
 			}
 		
 
