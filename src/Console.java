@@ -38,9 +38,14 @@ public class Console {
 			case 1: { // check in submenu
 				String regPlate = JOptionPane.showInputDialog("what does the cars regiter plate say?");
 				Vehicle visitor = RegisteredVehiculesList.findCar(regPlate);
+				if(visitor==null) {
+					System.out.println("You haven't registered yet");
+				}else
+				{	
 				garageHandler.checkIn(visitor);
+				}
 				break;
-			}
+				}
 			case 2: { // check out submenu
 				String regPlate = JOptionPane.showInputDialog("what does the cars regiter plate say?");
 				garageHandler.checkOut(regPlate);

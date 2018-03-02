@@ -51,7 +51,7 @@ public class RegisteredVehiculesList {
 
 	// findCar
 	public static Vehicle findCar(String regPlate) {
-		for (int i = 0; i < nextVehicule; i++) {
+		for (int i = 0; i < nextVehicule; i++) {											//not found exception???
 			if (vehicles[i].getPlate().equalsIgnoreCase(regPlate))return vehicles[i] ;
 		}
 		return null;
