@@ -20,6 +20,18 @@ public class Car extends Vehicle {
 		input.close();
 	}
 
+
+
+
+
+	public Car(String plate, String model, String owner, String color, String fuelType) {
+		super(plate,model,owner,fuelType);
+		this.color=color;
+	}
+
+
+
+
 	@Override
 	public String getInfo() {
 		return plate + "\t" + model + "\t" + owner + "\t" + color + "\t" + fuelType;
