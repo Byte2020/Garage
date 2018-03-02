@@ -78,13 +78,12 @@ public class Console {
 			String plate = input.next();
 			String model = input.next();
 			String owner = input.next();
-			String color = input.next();
 			String fuelType = input.nextLine();
 			
 			Car carInList =new Car(plate,model,owner,color,fuelType);
-				
+			vehicles.addFromList(carInList);	
 			
-			vehicles.add( );
+			
 			}
 		
 

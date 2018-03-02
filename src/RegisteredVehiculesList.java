@@ -61,6 +61,11 @@ public class RegisteredVehiculesList {
 		out.close();
 	}
 
+	public void addFromList(Car carInList) {
+		vehicles[nextVehicule]=carInList;
+		nextVehicule++;
+	}
+
 
 
 
