@@ -12,8 +12,8 @@ public class garageHandler {
 	
 	public void listParkedVehicles() {
 		
-		garage.printOutVehicleDetails();
-	}
+		
+	}garage.printOutVehicleDetails();
 	
 	public void listVehicleTypes() {
 		//TODO

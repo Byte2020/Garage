@@ -15,7 +15,7 @@ public class RegisteredVehiculesList {
 	}
 
 	public void add() {
-		Object[] options = {  "Car", "Bus", "Airplane", "Motorbike" };  //
+		Object[] options = {  "Car", "Bus", "Airplane ", "Motorbike" };  //
 		JOptionPane frame = new JOptionPane("GARAGE 1.0");
 		int num = JOptionPane.showOptionDialog(frame, "What kind of vehicle do you own?", "GARAGE 1.0", JOptionPane.YES_NO_OPTION,
 			JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);

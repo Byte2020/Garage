@@ -88,7 +88,10 @@ public class Console {
 			String model = input.next();
 			String owner = input.next();
 			String specialByType = input.next();
-			String fuelType= input.nextLine();
+			String fuelType = input.next();
+			String type= input.nextLine();
+			swi
+			
 			vehicles.add( );
 			}
 		
