@@ -17,7 +17,7 @@ public class Console {
 		vehicules = loadVehiclesFromFile(vehicules);
 		
 
-		boolean oppen = true;
+		boolean oppen = true;	// the garage is open
 		while (oppen) {
 			// The mane menu asks you want to do and gives 5 choices gets a number the
 			// choice as a number(num) to execute the correspondent code

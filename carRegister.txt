@@ -1,1 +1,5 @@
-123	Volvo	Linus	rosa	vatten
+123	Volvo	Linus	rosa	Vatten
+ABC	Audi	Peio	Black	Diesel
+FAX	Mazda	Mikko	Blue	Bensim
+ARN	Skoda	Roger	White	Electric
+OSL	Porsche	Pekka	Yellow	Petrol 

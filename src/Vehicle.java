@@ -1,8 +1,5 @@
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
-import utilities.FuelType;
 import utilities.VehicleType;
 
 //Parent class
@@ -46,19 +43,19 @@ public abstract class Vehicle {
 	}
 
 	
-	
+	// methods that have to be called by child classes
 	public abstract String getInfo();
 	public abstract VehicleType getType();
 	
 
-	// Print out method
-	public void printDetails() {
-
-		System.out.println("The registration plate of this vehicles is" + this.plate);
-		System.out.println("The model of this vehicle is" + this.model);
-		System.out.println("The owner is" + this.owner);
-		System.out.println("This vehicle is" + fuelType);
-
-	}
+//	// Print out method
+//	public void printDetails() {
+//
+//		System.out.println("The registration plate of this vehicles is" + this.plate);
+//		System.out.println("The model of this vehicle is" + this.model);
+//		System.out.println("The owner is" + this.owner);
+//		System.out.println("This vehicle is" + fuelType);
+//
+//	}
 
 }

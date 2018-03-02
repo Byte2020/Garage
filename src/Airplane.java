@@ -1,8 +1,5 @@
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
-import utilities.FuelType;
 import utilities.VehicleType;
 
 public class Airplane extends Vehicle {

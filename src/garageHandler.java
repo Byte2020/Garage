@@ -5,30 +5,46 @@ import utilities.VehicleType;
 public class garageHandler {
 
 	Garage garage = new Garage();
-
-
+	
+	// constructor
 	public garageHandler() throws FileNotFoundException {
 		garage.readFromFile();
 	}
 
-	public void listParkedVehicles() {
-
-		garage.printOutVehicleDetails();
-	}
-
-	public void listVehicleTypes() {
-		// TODO
-	}
-
+	
+	// methods , aske by console after choosing action
 	public void checkIn(Vehicle visitor) {
-		if (visitor.getType() == VehicleType.CAR)
+		switch (visitor.getType()) {	// The garage may allow new vehicles upon request 
+		case CAR:{
 			garage.addVehicles(visitor);
-
+			break;
+		}		
+		case AIRPLANE:{
+			System.out.println("You better go to Arlanda");
+			break;
+		}		
+		case BUS:{
+			System.out.println("The garage is too little for a bus");
+			break;
+		}		
+		case MOTORBIKE:{
+			System.out.println("You can park for free, don't need to check in");
+			break;
+		}
+		
+		default:
+			break;
+		}
+			
 	}
 
 	public void checkOut(String regPlate) {
 		garage.removeVehicle(regPlate);
 
+	}
+
+	public void listParkedVehicles() {
+		garage.printOutVehicleDetails();
 	}
 
 	public void registerParkedVehicles() throws FileNotFoundException {
