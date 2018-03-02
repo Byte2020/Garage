@@ -1,2 +1,1 @@
-123	Volvo	Linus	rosa	vatten
 FAX	Mazda	Mikko	Blue	Bensim

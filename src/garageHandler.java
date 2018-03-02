@@ -28,7 +28,7 @@ public class garageHandler {
 			break;
 		}		
 		case MOTORBIKE:{
-			System.out.println("You can park for free, don't need to check in");
+			garage.addVehicles(visitor);
 			break;
 		}
 		
