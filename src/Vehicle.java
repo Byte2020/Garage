@@ -27,11 +27,19 @@ public abstract class Vehicle {
 		
 		input.close();
 	}
-
+	public Vehicle(String plate, String model, String owner, String fuelType) {
+		super();
+		this.plate = plate;
+		this.model = model;
+		this.owner = owner;
+		this.fuelType = fuelType;
+	}
 	// GETTERS	
 	public String getPlate() {
 		return plate;
 	}
+
+
 
 	public String getModel() {
 		return model;
