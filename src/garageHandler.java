@@ -18,13 +18,13 @@ public class garageHandler {
 	}
 
 	public void checkIn(Vehicle visitor) {
-		if (visitor.getType() == VehicleType.CAR || visitor.getType() == VehicleType.MOTORBIKE)
+		if (visitor.getType() == VehicleType.CAR)
 			garage.addVehicles(visitor);
 
 	}
 
 	public void checkOut(String regPlate) {
-		Vehicle vehicle = garage.findPlate();
+		garage.removeVehicle(regPlate);
 
 	}
 
