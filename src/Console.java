@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+import utilities.VehicleType;
+
 
 public class Console {
 
@@ -88,10 +90,11 @@ public class Console {
 			String plate = input.next();
 			String model = input.next();
 			String owner = input.next();
-			String specialByType = input.next();
-			String fuelType = input.next();
-			String type= input.nextLine();
-			swi
+			String color = input.next();
+			String fuelType = input.nextLine();
+			
+			Car carInList =new Car(plate,model,owner,color,fuelType);
+				
 			
 			vehicles.add( );
 			}
