@@ -11,12 +11,13 @@ public class Console {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		garageHandler garageHandler = new garageHandler();
-
 		RegisteredVehiculesList vehicules = new RegisteredVehiculesList();
+
+		
 		vehicules = loadVehiclesFromFile(vehicules);
+		
 
 		boolean oppen = true;
-
 		while (oppen) {
 			// The mane menu asks you want to do and gives 5 choices gets a number the
 			// choice as a number(num) to execute the correspondent code
@@ -46,7 +47,7 @@ public class Console {
 				break;
 			}
 			case 3: { // register new vehicule submenu
-				
+				 
 				vehicules.add();
 				break;
 			}
@@ -67,6 +68,8 @@ public class Console {
 
 	}
 
+	
+	// take registered cars from "carRegister.txt" and add to the vehicules list,    just cars 
 	private static RegisteredVehiculesList loadVehiclesFromFile(RegisteredVehiculesList vehicles) throws FileNotFoundException {
 		File text = new File("carRegister.txt");
 		Scanner input = new Scanner(text);
