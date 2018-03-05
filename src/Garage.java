@@ -90,13 +90,12 @@ public class Garage {
 				--nextVehicle;
 			}
 		}
-		// motorbikes
+		// Motorbikes
 		for (int i = 0; i < nextMoto; i++) {
 			if (moto[i].getPlate().equalsIgnoreCase(regPlate)) {
 
 				for (int j = i; j < nextMoto - 1; j++) {
 					moto[j] = moto[j + 1];
-
 				}
 				--nextMoto;
 			}

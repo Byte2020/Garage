@@ -1,7 +1,5 @@
 import java.io.FileNotFoundException;
 
-import utilities.VehicleType;
-
 public class garageHandler {
 
 	Garage garage = new Garage();

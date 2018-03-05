@@ -1,10 +1,8 @@
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
-
 
 public class Console {
 
@@ -13,11 +11,9 @@ public class Console {
 		garageHandler garageHandler = new garageHandler();
 		RegisteredVehiculesList vehicules = new RegisteredVehiculesList();
 
-		
 		vehicules = loadVehiclesFromFile(vehicules);
-		
 
-		boolean oppen = true;	// the garage is open
+		boolean oppen = true; // the garage is open
 		while (oppen) {
 			// The mane menu asks you want to do and gives 5 choices gets a number the
 			// choice as a number(num) to execute the correspondent code
@@ -38,21 +34,20 @@ public class Console {
 			case 1: { // check in submenu
 				String regPlate = JOptionPane.showInputDialog("what does the cars regiter plate say?");
 				Vehicle visitor = RegisteredVehiculesList.findCar(regPlate);
-				if(visitor==null) {
+				if (visitor == null) {
 					System.out.println("You haven't registered yet");
-				}else
-				{	
-				garageHandler.checkIn(visitor);
+				} else {
+					garageHandler.checkIn(visitor);
 				}
 				break;
-				}
+			}
 			case 2: { // check out submenu
 				String regPlate = JOptionPane.showInputDialog("what does the cars regiter plate say?");
 				garageHandler.checkOut(regPlate);
 				break;
 			}
 			case 3: { // register new vehicule submenu
-				 
+
 				vehicules.add();
 				break;
 			}
@@ -73,9 +68,10 @@ public class Console {
 
 	}
 
-	
-	// take registered cars from "carRegister.txt" and add to the vehicules list,    just cars 
-	private static RegisteredVehiculesList loadVehiclesFromFile(RegisteredVehiculesList vehicles) throws FileNotFoundException {
+	// take registered cars from "carRegister.txt" and add to the vehicules list,
+	// just cars
+	private static RegisteredVehiculesList loadVehiclesFromFile(RegisteredVehiculesList vehicles)
+			throws FileNotFoundException {
 		File text = new File("carRegister.txt");
 		Scanner input = new Scanner(text);
 
@@ -83,18 +79,15 @@ public class Console {
 			String plate = input.next();
 			String model = input.next();
 			String owner = input.next();
-			String color = input.next();			
+			String color = input.next();
 			String fuelType = input.next();
-			
-			Car carInList =new Car(plate,model,owner,color,fuelType);
-			vehicles.addFromList(carInList);	
-			System.out.println(plate+" "+model+" "+owner+" "+fuelType+" "+color);
-			
-			}
-		
 
+			Car carInList = new Car(plate, model, owner, color, fuelType);
+			vehicles.addFromList(carInList);
+			System.out.println(plate + " " + model + " " + owner + " " + fuelType + " " + color);
+		}
 		input.close();
-		return(vehicles);
+		return (vehicles);
 	}
 
 }

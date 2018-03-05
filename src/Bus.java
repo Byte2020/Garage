@@ -18,8 +18,7 @@ public class Bus extends Vehicle {
 
 	@Override
 	public String getInfo() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+			return plate + "\t" + model + "\t" + owner + "\t" + length  + "\t" + fuelType;
+		}
 
 }

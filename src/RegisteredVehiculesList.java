@@ -1,15 +1,13 @@
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
 import utilities.VehicleType;
 
 
-//			our system has a list of cars registered in our system so customers don't have to register everytime they want to check in
-//			the list gets written in the file "carRegister.txt" when we quit the system
+//	This Garage Management System has a list of vehicles registered so that the customers are not required to register at Check IN 
+//		the list gets written in the file "carRegister.txt" when we quit the system
 
 
 public class RegisteredVehiculesList {

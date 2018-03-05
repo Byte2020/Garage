@@ -1,5 +1,4 @@
 import javax.swing.JOptionPane;
-
 import utilities.VehicleType;
 
 public class Airplane extends Vehicle {
@@ -8,10 +7,7 @@ public class Airplane extends Vehicle {
 
 	public Airplane() {
 		super();
-
-		NumberOfSeats= JOptionPane.showInputDialog("How many seats?");
-		
-
+		NumberOfSeats = JOptionPane.showInputDialog("How many seats?");
 	}
 
 	@Override

@@ -8,7 +8,6 @@ public abstract class Vehicle {
 	protected String plate, model, owner, fuelType;
 
 	// Default Constructor to print out the Vehicles details [Generate Constructor]
-
 	public Vehicle() {
 
 		plate= JOptionPane.showInputDialog("Enter the registration plate, please?");
@@ -27,8 +26,6 @@ public abstract class Vehicle {
 	public String getPlate() {
 		return plate;
 	}
-
-
 
 	public String getModel() {
 		return model;
