@@ -76,7 +76,6 @@ public class Garage {
 	
 	}
 
-	
 	// unregisters a car that just did check out
 	public void removeVehicle(String regPlate) {
 		//cars
