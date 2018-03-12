@@ -8,11 +8,10 @@ public class Garage {
 	private static final int maxCapacity = 10;
 	private static Vehicle[] array = new Vehicle[maxCapacity];
 	private static int nextVehicle;
-	private static Vehicle[] moto= new Vehicle[maxCapacity];
+	private static Vehicle[] moto = new Vehicle[maxCapacity];
 	private static int nextMoto;
-	
 
-	// takes informatio reccorded in parkedCarList.txt
+	// takes information recorded in parkedCarList.txt
 	public void readFromFile() throws FileNotFoundException {
 		File text = new File("parkedCarList.txt");
 		Scanner input = new Scanner(text);
@@ -48,37 +47,37 @@ public class Garage {
 		}
 		System.out.println();
 	}
-	//  registers a car that just checked in
+
+	// registers a car that just checked in
 	public void addVehicles(Vehicle visitor) {
 		switch (visitor.getType()) {
-		case CAR:{
+		case CAR: {
 			if (numberOfAvailableSpots() > 0) {
-			array[nextVehicle] = visitor;
-			nextVehicle++;
+				array[nextVehicle] = visitor;
+				nextVehicle++;
 			}
 
-		else
-			System.out.println("Parking Full");
+			else
+				System.out.println("Parking Full");
 			break;
 		}
-		case MOTORBIKE:{
-			if (nextMoto< maxCapacity) {
-			moto[nextMoto] = visitor;
-			nextMoto++;
-			}
-		else
-			System.out.println("Parking Full");
+		case MOTORBIKE: {
+			if (nextMoto < maxCapacity) {
+				moto[nextMoto] = visitor;
+				nextMoto++;
+			} else
+				System.out.println("Parking Full");
 			break;
 		}
 		default:
 			break;
 		}
-	
+
 	}
 
 	// unregisters a car that just did check out
 	public void removeVehicle(String regPlate) {
-		//cars
+		// cars
 		for (int i = 0; i < nextVehicle; i++) {
 			if (array[i].getPlate().equalsIgnoreCase(regPlate)) {
 
@@ -89,7 +88,7 @@ public class Garage {
 				--nextVehicle;
 			}
 		}
-		// Motorbikes
+		// Motorbike
 		for (int i = 0; i < nextMoto; i++) {
 			if (moto[i].getPlate().equalsIgnoreCase(regPlate)) {
 
@@ -102,7 +101,7 @@ public class Garage {
 
 	}
 
-	//  records historical of cars in garage for the next time the garage opens
+	// records historical of cars in garage for the next time the garage opens
 	public void writeCarsInGaragetoList() throws FileNotFoundException {
 		PrintWriter out = new PrintWriter("parkedCarList.txt");
 		for (int i = 0; i < nextVehicle; i++) {
